@@ -108,4 +108,3 @@ adjusted $r^2$ for headlength is the highest model
 I conclude that models based on headlength and chest measurements tend to show the highest adjusted $r^2$ which gives the best predictions. These variables were the highest compared to others such as headwidth, age, sex, and weight. 
 
 
-
