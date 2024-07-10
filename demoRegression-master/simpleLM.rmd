@@ -38,8 +38,11 @@ plot(LENGTH~AGE,data=bears)
 abline(ageModel)
 summary.lm(ageModel)
 ```
-adjuste $r^2$ for the age model is 0.51, this is less than the
-adjuste $r^2$ for neck, so this model is not as good as the neck model
+
+adjusted $r^2$ for the age model is 0.51, this is less than the     
+adjusted $r^2$ for neck, so this model is not as good as the neck model
+
+## length based on chest
 
 ```{r}
 chestModel <- lm(LENGTH~CHEST,data=bears)
@@ -47,7 +50,10 @@ plot(LENGTH~CHEST,data=bears)
 abline(chestModel)
 summary.lm(chestModel)
 ```
+adjusted $r^2$ for the chest model is 0.79, this has to do with the      
+adjusted $r^2$ for chest therefore the model is as good as the chest model. 
 
+## length based on headlength 
 
 ```{r}
 headlengthModel <- lm(LENGTH~HEADLEN,data=bears)
@@ -58,15 +64,46 @@ summary.lm(headlengthModel)
 
 For model length~headlength, adjusted $r^2$ = 0.84
 
-adjust $r^2$ for the head length model is 0.84, this is greater than.
+adjust $r^2$ for the head length model is 0.84, this is greater than.     
 adjusted $r^2$ for neck, this model is better than the neck model.
+
+## length based on headwidth 
 
 ```{r}
 headwidthModel <- lm(LENGTH~HEADWTH,data=bears)
 plot(LENGTH~HEADWTH,data=bears)
 abline(headwidthModel)
-summary.lm(headlengthModel)
+summary.lm(headwidthModel)
 ```
+
+adjusted $r^2$ = 0.53,      
+adjusted $r^2$ for Length~Headlength is better than length~headwidth 
+
+## length based on sex
+
+```{r}
+sexModel <- lm(LENGTH~SEX,data=bears)
+plot(LENGTH~SEX,data=bears)
+abline(sexModel)
+summary.lm(sexModel)
+```
+
+adjusted $r^2$ = -0.0084,      
+adjusted $r^2$ length~headlength is .84 this shows that it is better than length~sex
+
+## length based on weight 
+
+```{r}
+weightModel <- lm(LENGTH~WEIGHT,data=bears)
+plot(LENGTH~WEIGHT,data=bears)
+abline(weightModel)
+summary.lm(weightModel)
+```
+
+adjusted $r^2$ for weight is 0.75, this is less than adjusted $r^2$ for headwidth therefore this model is not a good model for headwidth.     
+adjusted $r^2$ for headlength is the highest model
+
+
 
 
 
